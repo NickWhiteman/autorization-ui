@@ -3,8 +3,8 @@ import createSagaMiddleware from "redux-saga";
 import { all } from 'redux-saga/effects';
 
 import { IAuthState } from './types';
-import { authReducer, AuthReducer } from './reducer';
-import { AuthRootSaga } from './saga/saga';
+import { authReducer } from './reducer';
+import { AuthRootSaga } from "./root-saga";
 
 export interface IRootState {
   AuthStore: IAuthState;
@@ -27,6 +27,6 @@ export default store;
 
 function* rootSaga() {
   yield all([
-    AuthRootSaga(),
+    AuthRootSaga()
   ]);
 }

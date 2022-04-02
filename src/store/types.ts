@@ -6,5 +6,4 @@ export type User = {
 export interface IAuthState {
   users: User[]
   authUser: User
-  updateUser: User
 }

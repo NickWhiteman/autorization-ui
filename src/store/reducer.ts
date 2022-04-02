@@ -7,7 +7,6 @@ const STORE_NAME = '@authorization';
 const initialState: IAuthState = {
   users: [],
   authUser: {login: '', password: ''},
-  updateUser: {login: '', password: ''},
 };
 
 export const AuthReducer = createSlice({
@@ -21,10 +20,13 @@ export const AuthReducer = createSlice({
       state.users.push(payload);
     },
     updateUser(state, {payload}: PayloadAction<User>) {
-      state.users = state.users.filter(item => item.login === payload.login;
+      state.users = state.users.map((user: User) => {
+        if ( user.login === payload.login ) return payload
+        return user;
+      }); 
     }
   }
-}
+});
 
 export const authAction = {
   ...AuthReducer.actions
