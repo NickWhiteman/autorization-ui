@@ -1,3 +1,3 @@
-export interface IFormProps {
-  type: 'update' | 'singUp' | 'singIn'
-};
+import { TypeForm } from "../../store/types";
+
+export type FormProps = Pick<TypeForm, 'type'>
