@@ -1,12 +1,22 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { IAuthState, User } from "./types";
+import { 
+  IAuthState,
+  TypeForm, 
+  User 
+} from "./types";
 
 const STORE_NAME = '@authorization';
 
 const initialState: IAuthState = {
   users: [],
-  authUser: {login: '', password: ''},
+  authUser: {
+    login: '', 
+    password: ''
+  },
+  typeForm: {
+    type: 'singIn'
+  } 
 };
 
 export const AuthReducer = createSlice({
@@ -21,9 +31,15 @@ export const AuthReducer = createSlice({
     },
     updateUser(state, {payload}: PayloadAction<User>) {
       state.users = state.users.map((user: User) => {
+        /* 
+        * Я осведомлен что так делать нельзя, но я не хочу реализовывать полноценный сервис авторизации на NodeJS
+        */
         if ( user.login === payload.login ) return payload
         return user;
       }); 
+    },
+    typeForm(state, {payload}: PayloadAction<TypeForm>) {
+      state.typeForm = payload;
     }
   }
 });
