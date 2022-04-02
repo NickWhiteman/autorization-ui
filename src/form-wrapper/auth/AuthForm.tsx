@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 
 export const AuthForm: React.FC = () => {
   const dispatch = useDispatch();
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = (data: any) => console.log(data);
 
   useEffect(() => {

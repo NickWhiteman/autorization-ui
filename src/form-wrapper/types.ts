@@ -1,3 +1,3 @@
-import { TypeForm } from "../../store/types";
+import { TypeForm } from "../store/types";
 
 export type FormProps = Pick<TypeForm, 'type'>
