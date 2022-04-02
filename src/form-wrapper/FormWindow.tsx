@@ -14,7 +14,7 @@ export const FormWindow: React.FC = () => {
     update: 'update'
   };
 
-  const singIn = () => (
+  const singIn = (
     <>
       <div className="body__header">
         <div className="header__name">Sing In</div>
@@ -25,7 +25,7 @@ export const FormWindow: React.FC = () => {
     </>
   );
 
-  const singUp = () => (
+  const singUp = (
     <>
       <div className="body__header">
         <div className="header__name">Sing Up</div>
@@ -36,7 +36,7 @@ export const FormWindow: React.FC = () => {
     </>
   );
 
-  const update = () => (
+  const update = (
     <>
       <div className="body__header">
         <div className="header__name">Update</div>
@@ -51,17 +51,17 @@ export const FormWindow: React.FC = () => {
     <div className="modal__body">
       {
         typeForm === mode.singIn && (
-          singIn()
+          singIn
         )
       }
       {
         typeForm === mode.singUp && (
-          singUp()
+          singUp
         )
       }
       {
         typeForm === mode.update && (
-          update()
+          update
         )
       }
     </div>
