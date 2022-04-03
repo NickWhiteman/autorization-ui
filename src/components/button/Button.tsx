@@ -3,12 +3,13 @@ import { IButtonProps } from "./types";
 
 export const Button: React.FC<IButtonProps> = ({
   mode,
+  type,
   children,
   link,
   onClick
 }) => {
   switch (mode) {
-    case 'close-button':
+    case 'button-close':
       return (
         <button
           className='close__button'
@@ -26,6 +27,7 @@ export const Button: React.FC<IButtonProps> = ({
       return (
         <button
           className='button__primary'
+          type={type ? type : 'button'}
           onClick={onClick}>{children}</button>
       );
     default:

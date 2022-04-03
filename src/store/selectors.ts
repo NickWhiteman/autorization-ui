@@ -3,8 +3,8 @@ import { IRootState } from ".";
 export const selectTypeForm = (state: IRootState) => 
   state.AuthStore.typeForm.type;
 
-// export const selectIsLoading = (state: IRootState) => 
-//   state.ShowcaseStore.isLoading;
+export const selectAuthUser = (state: IRootState) => 
+  state.AuthStore.authUser;
 
 // export const selectDeleteId = (state: IRootState) =>
 //   state.ShowcaseStore.cardForDeleted;

@@ -1,4 +1,4 @@
-.showcase__button_link {
+.button_link {
   width: 159px;
   height: 45px;
   margin-right: 16px;
@@ -6,11 +6,12 @@
   margin: 10px 10px 10px 10px;
   border: none;
   border-radius: 6px;
+  font-family: "Arial Narrow Bold", sans-serif;
   color: #6d7885;
   background-color: #F6F7F9;
 }
 
-.showcase__button__primary {
+.button__primary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,16 +24,15 @@
   width: 159px;
   height: 45px;
   color: white;
-  background-color: #4587ED;
+  background-color: #168177;
   border: none;
   border-radius: 10px;
-  font-family: Roboto;
-  font-style: normal;
+  font-family: "Arial Narrow Bold", sans-serif;
+  font-style: bold;
   line-height: 20px;
-  margin: 10px 10px 10px 10px;
 }
 
-.showcase_close__button {
+.close__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,9 +49,7 @@
   background-color: transparent;
   border: none;
   border-radius: 8px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
+  font-family: "Arial Narrow Bold", sans-serif;
   font-size: 14px;
   line-height: 20px;
 }
