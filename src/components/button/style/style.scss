@@ -1,10 +1,10 @@
 $rowButtonBackground:#F6F7F9;
 $rowButtonColorIcon: rgb(133, 133, 133);
-$dashboardButtonBackground: #4587ED;
+$dashboardButtonBackground: #168177;
 $linkButtonBackground: rgba(228, 229, 232, 1);
 $linkTextColor: rgba(109, 120, 133, 1);
 
-.showcase__button_link {
+.button_link {
     width: 159px;
     height: 45px;
     margin-right: 16px;
@@ -12,11 +12,12 @@ $linkTextColor: rgba(109, 120, 133, 1);
     margin: 10px 10px 10px 10px;
     border: none;
     border-radius: 6px;
+    font-family: 'Arial Narrow Bold', sans-serif;    
     color: $linkTextColor;
     background-color: $rowButtonBackground;
 }
 
-.showcase__button__primary {
+.button__primary {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,13 +27,12 @@ $linkTextColor: rgba(109, 120, 133, 1);
     background-color: $dashboardButtonBackground;
     border: none;
     border-radius: 10px;
-    font-family: Roboto;
-    font-style: normal;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-style: bold;
     line-height: 20px;
-    margin: 10px 10px 10px 10px
 }
 
-.showcase_close__button {
+.close__button {
     display: flex;
     margin-left: auto;
     justify-content: center;
@@ -43,9 +43,7 @@ $linkTextColor: rgba(109, 120, 133, 1);
     background-color: transparent;
     border: none;
     border-radius: 8px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
+    font-family: 'Arial Narrow Bold', sans-serif;    
     font-size: 14px;
     line-height: 20px;
 }
