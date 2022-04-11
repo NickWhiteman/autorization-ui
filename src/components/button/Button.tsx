@@ -12,7 +12,7 @@ export const Button: React.FC<IButtonProps> = ({
     case 'button-close':
       return (
         <button
-          className='close__button'
+          className='button__close'
           type='button'
           onClick={onClick}>{children}</button>
       );

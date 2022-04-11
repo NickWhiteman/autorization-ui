@@ -64,7 +64,7 @@ $labelColor: #818C99;
     height: 35px;
     border-radius: 10px;
     border: 2px solid rgb(7, 136, 106);
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .text-input:active {
@@ -80,4 +80,10 @@ $labelColor: #818C99;
 
 .auth_user {
     color: white;
+}
+
+.error_bounder {
+    color: red;
+    font-size: 12px;
+    margin-top: -14px;
 }

@@ -2,7 +2,7 @@ import "./style/style.css";
 import { useDispatch, useSelector } from "react-redux";
 
 import { LogInForm } from "./logIn/LogInForm";
-import { selectAuthUser, selectTypeForm } from "../store/selectors";
+import { selectAuthUser, selectIsOpenLogin, selectTypeForm } from "../store/selectors";
 import { SingUpForm } from "./singUp/SingUpForm";
 import { UpdateForm } from "./update/UpdateForm";
 
@@ -54,17 +54,17 @@ export const FormWindow: React.FC = () => {
   return (
     <div className={`body ${
       authUser.login && 
-      typeForm === 'update' && 'update'}`
+      typeForm === mode.update && 'update'}`
     }>
       {
-        typeForm === mode.singIn && (
-          singIn
-        )
+          typeForm === mode.singIn && (
+            singIn
+          )
       }
       {
-        typeForm === mode.singUp && (
-          singUp
-        )
+          typeForm === mode.singUp && (
+            singUp
+          )
       }
       {
         typeForm === mode.update && (

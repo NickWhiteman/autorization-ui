@@ -6,12 +6,13 @@ import { FormWindow } from './form-wrapper/FormWindow';
 import { Button } from './components/button/Button';
 import { authAction } from './store/reducer';
 import { TypeForm } from './store/types';
-import { selectAuthUser, selectTypeForm } from './store/selectors';
+import { selectAuthUser, selectIsOpenLogin, selectTypeForm } from './store/selectors';
 
 function App() {
   const dispatch = useDispatch();
   const typeForm = useSelector(selectTypeForm)
   const authUser = useSelector(selectAuthUser);
+  const isOpenLogin = useSelector(selectIsOpenLogin)
 
   const singUp: TypeForm = {
     type: 'singUp'
@@ -30,7 +31,7 @@ function App() {
     <div className="App">
       <div className="header__block">
         {
-          authUser && typeForm === 'update' 
+          authUser || typeForm === 'update' 
             ? <div className="auth_user">{authUser.login}</div> 
             : (
                 typeForm === 'singIn' &&
@@ -52,7 +53,9 @@ function App() {
       </div>
       <div className="app__body">
         <div className="app__auth">
-          <FormWindow />
+          {
+            isOpenLogin && <FormWindow />
+          }
           {
             authUser.login &&
               <div className="auth__page">{`ВЫ АВТОРИЗОВАЛИСЬ ${authUser.login}`}</div>

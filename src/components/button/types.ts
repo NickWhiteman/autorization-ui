@@ -1,6 +1,3 @@
-import { ReactNode } from "react"
-import { Props } from "../form/types"
-
 export interface IButtonProps {
   mode: 'button-close' | 'button-primary' | 'button-link'
   type?: 'button' | 'submit' | 'reset' 

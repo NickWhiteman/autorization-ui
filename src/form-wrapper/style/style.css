@@ -83,7 +83,7 @@
   height: 35px;
   border-radius: 10px;
   border: 2px solid #07886a;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .text-input:active {
@@ -104,4 +104,10 @@
 
 .auth_user {
   color: white;
+}
+
+.error_bounder {
+  color: red;
+  font-size: 12px;
+  margin-top: -14px;
 }

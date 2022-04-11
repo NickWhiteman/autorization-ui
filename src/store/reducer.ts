@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { IUpdateForm } from "../components/form/types";
 
 import { 
   IAuthState,
@@ -16,7 +17,10 @@ const initialState: IAuthState = {
   },
   typeForm: {
     type: 'singIn'
-  } 
+  },
+  isOpenLogin: true,
+  error: undefined,
+  newPassword: undefined
 };
 
 export const AuthReducer = createSlice({
@@ -29,17 +33,20 @@ export const AuthReducer = createSlice({
     singUp(state, {payload}: PayloadAction<User>) {
       state.users.push(payload);
     },
-    updateUser(state, {payload}: PayloadAction<User>) {
-      state.users = state.users.map((user: User) => {
-        /* 
-        * Я осведомлен что так делать нельзя, но я не хочу реализовывать полноценный сервис авторизации на NodeJS
-        */
-        if ( user.login === payload.login ) return payload
-        return user;
-      }); 
+    updateUser(state, {payload}: PayloadAction<(User | undefined)[]>) {
+      state.users = payload; 
+    },
+    newPassword(state, {payload}: PayloadAction<IUpdateForm>) {
+      state.newPassword = payload
     },
     typeForm(state, {payload}: PayloadAction<TypeForm>) {
       state.typeForm = payload;
+    },
+    isOpenLogIn(state) {
+      state.isOpenLogin = !state.isOpenLogin
+    },
+    errorAuth(state, {payload}: PayloadAction<string>) {
+      state.error = payload
     }
   }
 });

@@ -6,23 +6,11 @@ export const selectTypeForm = (state: IRootState) =>
 export const selectAuthUser = (state: IRootState) => 
   state.AuthStore.authUser;
 
-// export const selectDeleteId = (state: IRootState) =>
-//   state.ShowcaseStore.cardForDeleted;
+export const selectUsers = (state: IRootState) => 
+  state.AuthStore.users;
 
-// export const selectIsDeleteMode = (state: IRootState) =>
-//   state.ShowcaseStore.isDelete;
+export const selectUpdatePassword = (state: IRootState) => 
+  state.AuthStore.newPassword;
 
-// export const selectGetData = (state: IRootState) =>
-//   state.ShowcaseStore.data;
-
-// export const selectGetCardsData = (state: IRootState) =>
-//   state.ShowcaseStore.processedData;
-
-// export const selectPageNumber = (state: IRootState) =>
-//   state.ShowcaseStore.pageNumber;
-
-// export const selectIdCard = (state: IRootState) =>
-//   state.ShowcaseStore.idCard;
-
-// export const selectIdAlbum = (state: IRootState) =>
-//   state.ShowcaseStore.idAlbum;
+export const selectIsOpenLogin = (state: IRootState) =>
+  state.AuthStore.isOpenLogin;
